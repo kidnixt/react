@@ -1,5 +1,6 @@
 import logo from './logo.svg';
 import Texto from './components/Texto';
+import Persona from './components/Persona';
 import './App.css';
 
 function App() {
@@ -11,7 +12,9 @@ function App() {
         <p>
           aberga
           <Texto />
-
+          <br />
+          <Persona nombre = "johny" />
+          <Persona nombre = "fiumba" />
         </p>
         <a
           className="App-link"
