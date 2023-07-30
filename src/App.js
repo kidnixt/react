@@ -1,6 +1,8 @@
 
 import './App.css';
 import Counter from './components/Counter';
+import List from './components/List';
+import ApiCall from './components/apiCall';
 
 function App() {
 
@@ -9,7 +11,10 @@ function App() {
     //codigo jsx, se debe tener un solo elemento padre
     <div className="App">
         <h1>Hola mundo</h1>
+        <List/>
+        <ApiCall/>
         <Counter/>
+
         
     </div>
     

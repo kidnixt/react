@@ -1,4 +1,4 @@
-import { useState } from "react"
+import { useState, useEffect } from "react"
 
 const Counter = () => {
 
@@ -9,6 +9,18 @@ const Counter = () => {
     //el segundo es una funcion que permite modificar el estado
 
     //el estado es inmutable, no se puede modificar directamente
+
+    //cada vez que alguien haga algun cambio, se va hacer eso de aca
+    //cualquier cosa que cambie va a ejecutar el use effect
+    useEffect(() => {
+
+        document.title = `Contador: ${counter} - Nombre: ${name}`
+
+    })
+
+    useEffect(() => {
+        document.title = `aberga: ${counter}`
+    }, [counter])
 
     const funCounter = () => {
         setCounter(counter + 1)
@@ -30,6 +42,8 @@ const Counter = () => {
             <input type="text" id='txtName' onChange={update}/>
             <p>El nombre es: </p>
             <p>{name}</p>
+            <hr/>
+
         </div>
     )
 }
